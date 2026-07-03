@@ -1,4 +1,4 @@
-package com.example.inkventory.feature.settings
+package com.example.trackshelf.feature.settings
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
