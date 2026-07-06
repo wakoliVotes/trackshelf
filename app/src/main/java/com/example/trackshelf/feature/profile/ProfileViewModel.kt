@@ -51,7 +51,7 @@ data class ProfileUiState (
     val socialTw: String = "Twitter",
     val socialYt: String = "YouTube",
     val socialLi: String = "LinkedIn",
-    val socialWa: String = "WhatsApp"
+    val socialWa: String = "WhatsApp",
 
     val darkMode: Boolean = false,
     val notifications: Boolean = true,
