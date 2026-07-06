@@ -37,16 +37,22 @@ class ProfileViewModel: ViewModel() {
 
 }
 
-annotation class ProfileUiState (
+data class ProfileUiState (
     val name: String = "John Doe",
-    val email: String = "john.doe@example.com",
-    val profilePictureUrl: String = "https://example.com/profile.jpg",
+    val email: String = "trackshelf@company.com",
+    val profilePictureUrl: String = "https://trackshelf.com/profile.jpg",
+
     val aboutUs: String = "About Us",
     val contactUs: String = "Contact Us",
-    val social_fb: String = "Facebook",
-    val social_ig: String = "Instagram",
-    val social_tw: String = "Twitter",
-    val social_yt: String = "YouTube",
-    val social_li: String = "LinkedIn",
-    val social_wa: String = "WhatsApp"
+
+    val socialFb: String = "Facebook",
+    val socialIg: String = "Instagram",
+    val socialTw: String = "Twitter",
+    val socialYt: String = "YouTube",
+    val socialLi: String = "LinkedIn",
+    val socialWa: String = "WhatsApp"
+
+    val darkMode: Boolean = false,
+    val notifications: Boolean = true,
+    val currency: String = "KSH"
 )
