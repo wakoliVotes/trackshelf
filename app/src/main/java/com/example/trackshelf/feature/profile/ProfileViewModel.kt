@@ -1,5 +1,7 @@
 package com.example.trackshelf.feature.profile
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -34,7 +36,6 @@ class ProfileViewModel: ViewModel() {
         _uiState.value = _uiState.value.copy(email = email)
     }
 
-
 }
 
 data class ProfileUiState (
@@ -56,3 +57,27 @@ data class ProfileUiState (
     val notifications: Boolean = true,
     val currency: String = "KSH"
 )
+
+
+@Preview
+@Composable
+fun ProfileContentPreview() {
+    ProfileContent(
+        uiState = ProfileUiState(
+            name = "John Doe",
+            email = "trackshelf@company.com",
+            profilePictureUrl = "https://trackshelf.com/profile.jpg",
+            aboutUs = "About Us",
+            contactUs = "Contact Us",
+            socialFb = "Facebook",
+            socialIg = "Instagram",
+            socialTw = "Twitter",
+            socialYt = "YouTube",
+            socialLi = "LinkedIn",
+            socialWa = "WhatsApp",
+            darkMode = false,
+            notifications = true,
+            currency = "KSH"
+        )
+    )
+}
