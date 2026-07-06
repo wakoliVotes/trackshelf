@@ -19,6 +19,7 @@ import androidx.compose.material3.icons.filled.Person
 import androidx.compose.material3.icons.filled.Phone
 import androidx.compose.material3.icons.filled.Public
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -108,7 +109,7 @@ fun ProfileContent(
             subtitle = uiState.aboutUs
         )
 
-        Divider()
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
         ProfileItem(
             icon = Icons.Default.Phone,
@@ -131,21 +132,21 @@ fun ProfileContent(
             title = uiState.socialFb
         )
 
-        Divider()
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
         ProfileItem(
             icon = Icons.Default.Public,
             title = uiState.socialIg
         )
 
-        Divider()
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
         ProfileItem(
             icon = Icons.Default.Public,
             title = uiState.socialTw
         )
 
-        Divider()
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
         ProfileItem(
             icon = Icons.Default.Public,
