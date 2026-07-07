@@ -13,12 +13,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Icon
-import androidx.compose.material3.icons.filled.ChevronRight
-import androidx.compose.material3.icons.filled.Person
-import androidx.compose.material3.icons.filled.Phone
-import androidx.compose.material3.icons.filled.Public
-import androidx.compose.material3.Divider
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
@@ -48,8 +48,7 @@ fun ProfileScreen(
 fun ProfileContent(
     uiState: ProfileUiState
 ) {
-
-    Column(
+    Column (
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
@@ -60,7 +59,7 @@ fun ProfileContent(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        )
 
             val initial = uiState.name.firstOrNull()?.uppercaseChar()?.toString() ?: ""
 
@@ -153,16 +152,16 @@ fun ProfileContent(
             title = uiState.socialYt
         )
 
-        Divider()
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
         ProfileItem(
             icon = Icons.Default.Public,
             title = uiState.socialLi
         )
 
-        Divider()
+    HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
-        ProfileItem(
+    ProfileItem(
             icon = Icons.Default.Public,
             title = uiState.socialWa
         )
@@ -179,7 +178,6 @@ fun ProfileContent(
 
         Spacer(modifier = Modifier.height(16.dp))
     }
-}
 
 @Composable
 fun ProfileItem(
