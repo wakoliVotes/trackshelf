@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -48,7 +49,7 @@ fun ProfileScreen(
 fun ProfileContent(
     uiState: ProfileUiState
 ) {
-    Column (
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
@@ -59,8 +60,7 @@ fun ProfileContent(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
-        )
-
+        ) {
             val initial = uiState.name.firstOrNull()?.uppercaseChar()?.toString() ?: ""
 
             Box(
@@ -159,9 +159,9 @@ fun ProfileContent(
             title = uiState.socialLi
         )
 
-    HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
 
-    ProfileItem(
+        ProfileItem(
             icon = Icons.Default.Public,
             title = uiState.socialWa
         )
@@ -178,39 +178,39 @@ fun ProfileContent(
 
         Spacer(modifier = Modifier.height(16.dp))
     }
-
-@Composable
-fun ProfileItem(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    title: String,
-    subtitle: String? = null
-) {
-
-    ListItem(
-        modifier = Modifier.clickable { },
-        headlineContent = {
-            Text(title)
-        },
-        supportingContent = {
-            if (subtitle != null) {
-                Text(subtitle)
-            }
-        },
-        leadingContent = {
-            Icon(
-                imageVector = icon,
-                contentDescription = null
-            )
-        },
-        trailingContent = {
-            Icon(
-                imageVector = Icons.Default.ChevronRight,
-                contentDescription = null
-            )
-        }
-    )
 }
 
+    @Composable
+    fun ProfileItem(
+        icon: androidx.compose.ui.graphics.vector.ImageVector,
+        title: String,
+        subtitle: String? = null
+    ) {
+
+        ListItem(
+            modifier = Modifier.clickable { },
+            headlineContent = {
+                Text(title)
+            },
+            supportingContent = {
+                if (subtitle != null) {
+                    Text(subtitle)
+                }
+            },
+            leadingContent = {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null
+                )
+            },
+            trailingContent = {
+                Icon(
+                    imageVector = Icons.Default.ChevronRight,
+                    contentDescription = null
+                )
+            }
+        )
+    }
 @Preview(showBackground = true)
 @Composable
 private fun ProfilePreview() {
