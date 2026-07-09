@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+//    id("com.google.dagger.hilt.android")
+//    kotlin("jvm") version "2.4.0"
+    id("com.google.devtools.ksp") version "2.3.9"
 }
 
 android {
@@ -57,4 +60,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.compose.material.icons.extended)
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.2")
+    implementation("com.google.dagger:hilt-android:2.60.1")
 }
