@@ -4,6 +4,8 @@
 
 ---
 
+Table of Contents
+
 # Overview
 
 **TrackShelf** is a clean, offline-first Android application designed to simplify inventory management for independent bookshops, school bookstores, stationery shops, and office supply retailers.
