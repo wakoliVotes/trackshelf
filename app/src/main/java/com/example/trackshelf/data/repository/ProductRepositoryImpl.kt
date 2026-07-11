@@ -12,37 +12,28 @@ class ProductRepositoryImpl @Inject constructor(
     override fun getProducts(): kotlinx.coroutines.flow.Flow<List<Product>> {
         TODO("Not yet implemented")
     }
-
     override suspend fun getProductById(id: Long): Product? {
         TODO("Not yet implemented")
     }
-
     override fun searchProducts(query: String): kotlinx.coroutines.flow.Flow<List<Product>> {
         TODO("Not yet implemented")
     }
-
     override suspend fun addProduct(product: Product) {
         TODO("Not yet implemented")
     }
-
     override suspend fun updateProduct(product: Product) {
         TODO("Not yet implemented")
     }
-
     override suspend fun deleteProduct(product: Product) {
         TODO("Not yet implemented")
     }
-
     override fun getLowStockProducts(): kotlinx.coroutines.flow.Flow<List<Product>> {
         TODO("Not yet implemented")
     }
-
     override fun getProductCount(): kotlinx.coroutines.flow.Flow<Int> {
-        TODO("Not yet implemented")
+        TODO ("FOR IMPLEMENTATION")
     }
-
     override fun getInventoryValue(): kotlinx.coroutines.flow.Flow<Double?> {
         TODO("Not yet implemented")
     }
-
 }
