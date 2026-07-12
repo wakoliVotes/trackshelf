@@ -14,7 +14,7 @@ composeBom = "2026.06.01"
 material3IconsExtended = "1.4.2"
 navigationCompose = "2.9.8"
 room3CommonJvm = "3.0.0"
-ksp = "2.2.10-2.0.2"
+ksp = "2.3.9"
 hiltCompiler = "2.60.1"
 
 [libraries]
@@ -47,5 +47,5 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt-compiler = { id = "com.google.dagger.hilt.compiler", version.ref = "hiltCompiler" }
-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.2.10-2.0.2" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.3.9" }
 
